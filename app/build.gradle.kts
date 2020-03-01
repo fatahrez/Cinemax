@@ -3,15 +3,16 @@ plugins {
     kotlin("android")
     kotlin("android.extensions")
 }
+
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Dep.Android.compileSdk)
 
     defaultConfig {
-        applicationId = "com.lukmotech.cinemax"
-        minSdkVersion(21)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Dep.Android.applicationId
+        minSdkVersion(Dep.Android.minSdkVersion)
+        targetSdkVersion(Dep.Android.targetSdkVersion)
+        versionCode = Dep.Android.versionCode
+        versionName = Dep.Android.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -29,12 +30,12 @@ android {
 dependencies {
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
-    implementation("androidx.core:core-ktx:1.2.0")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
-    testImplementation("junit:junit:4.13")
-    androidTestImplementation("androidx.test.ext:junit:1.1.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
+    implementation(Dep.Kotlin.kotlin_std)
+    implementation(Dep.AndroidX.core_ktx)
+    implementation(Dep.AndroidX.appcompat)
+    implementation(Dep.AndroidX.constraint_layout)
+    testImplementation(Dep.Tests.junit)
+    androidTestImplementation(Dep.Tests.test_ext)
+    androidTestImplementation(Dep.Tests.espresso)
 
 }
