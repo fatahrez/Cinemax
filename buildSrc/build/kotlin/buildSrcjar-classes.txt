@@ -1,0 +1,1 @@
+/home/fatah/Documents/AndroidApps/Cinemax/buildSrc/build/classes/kotlin/main/Dep.class:/home/fatah/Documents/AndroidApps/Cinemax/buildSrc/build/classes/kotlin/main/Versions.class
